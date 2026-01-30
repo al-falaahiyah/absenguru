@@ -2,20 +2,53 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>SPMB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absen Guru</title>
+
+  <!-- Favicon PNG -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTWPT9eNxcM0KuN2niGbqefP3_XLQy3GpruF95R6WGQIRpKe9pd5FnYnJyal2DeThtmqQpvSMlIjvcVRQ4SJD1C_J9wxl_puKMMsk7-dLMzv1wjLUZPNQh1HWaZ6PlMsj0WE918QtSRYLgNVlkio4eUVl9O3p_uWndgPHZuTFND5Iwj_Ow_LNEPZMf7XsC/w98-h98/devlogo.png">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #f2f2f2;
+    }
+    iframe {
+      width: 100%;
+      height: 100dvh;
+      border: none;
+      display: block;
+      background: #fff;
+    }
+  </style>
+
   <script>
     (function () {
-      const base = "https://script.google.com/macros/s/AKfycbwpbHggIJ_T114k_noTk2fVlk6MY4cJDQIuhq6cFs-iiOKOV_u3-e0wSzedNPu9szrX/exec";
+      const base =
+        "https://script.google.com/macros/s/AKfycbxUaUTF-O-CtFNdz2pV8ls5y8FrPXHQDOIsIhKYY6SuCY90jGXH6rzlxqPU8FSIcQ3B/exec";
+
       const path = location.pathname.toLowerCase();
 
-      if (path.endsWith("/admin")) {
-        window.location.replace(base + "?page=admin");
-      } else {
-        window.location.replace(base);
+      // akses admin via /admin
+      if (path.includes("/admin")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("app").src = base + "?page=admin";
+        });
       }
     })();
   </script>
 </head>
 <body>
+
+<iframe
+  id="app"
+  src="https://script.google.com/macros/s/AKfycbxUaUTF-O-CtFNdz2pV8ls5y8FrPXHQDOIsIhKYY6SuCY90jGXH6rzlxqPU8FSIcQ3B/exec"
+  allow="camera; microphone; geolocation; fullscreen; display-capture"
+  allowfullscreen>
+</iframe>
+
 </body>
 </html>
