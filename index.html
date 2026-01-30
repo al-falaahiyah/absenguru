@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SPMB</title>
+  <script>
+    (function () {
+      const base = "https://script.google.com/macros/s/AKfycbwpbHggIJ_T114k_noTk2fVlk6MY4cJDQIuhq6cFs-iiOKOV_u3-e0wSzedNPu9szrX/exec";
+      const path = location.pathname.toLowerCase();
+
+      if (path.endsWith("/admin")) {
+        window.location.replace(base + "?page=admin");
+      } else {
+        window.location.replace(base);
+      }
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
